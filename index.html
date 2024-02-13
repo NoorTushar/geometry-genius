@@ -178,6 +178,54 @@
                   </div>
                </div>
                <!-- Parallelogram End -->
+
+               <!-- Rhombus Container -->
+               <div
+                  class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-12 space-y-8"
+               >
+                  <div>
+                     <img src="images/rhombus.png" alt="" />
+                  </div>
+                  <div class="space-y-4">
+                     <h3 class="text-2xl font-bold">Rhombus</h3>
+                     <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                     <div class="grid grid-cols-4 gap-2 items-center">
+                        <!-- base -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="d1"
+                           id="rhombus-diagonal-1"
+                        />
+                        <span>cm</span>
+
+                        <!-- height -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="d2"
+                           id="rhombus-diagonal-2"
+                        />
+                        <span>cm</span>
+                     </div>
+                     <p>
+                        Area:
+                        <span id="rhombus-area-display">xyz</span> cm<sup
+                           >2</sup
+                        >
+                     </p>
+                  </div>
+
+                  <div class="">
+                     <button
+                        class="rounded-lg bg-[#1090D8] font-bold text-xl text-[#fff] p-4 w-full"
+                        onclick="calculateRhombusArea()"
+                     >
+                        Calculate
+                     </button>
+                  </div>
+               </div>
+               <!-- Rhombus End -->
             </div>
             <!-- Area Calculation Container -->
             <div class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-7">
@@ -190,5 +238,6 @@
       <script src="/scripts/calculate-triangle-area.js"></script>
       <script src="/scripts/calculate-rectangle-area.js"></script>
       <script src="scripts/calculate-parallelogram-area.js"></script>
+      <script src="scripts/calculate-rhombus-area.js"></script>
    </body>
 </html>
