@@ -4,6 +4,191 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Geometry Genius</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     clifford: "#da373d",
+                  },
+               },
+            },
+         };
+      </script>
+      <!-- Common CSS -->
+      <link rel="stylesheet" href="/css/common.css" />
    </head>
-   <body></body>
+   <body class="font-inter text-[#414141]">
+      <header class="max-w-[1820px] mx-auto w-[95%]">
+         <div class="bg-[#E6F4FB]">
+            <div>
+               <h1>Interactive</h1>
+               <h4>Geometry Genius</h4>
+            </div>
+            <div>
+               <button>Blog</button>
+            </div>
+         </div>
+      </header>
+
+      <main class="max-w-[1820px] mx-auto w-[95%]">
+         <section>
+            <!-- All Dimensions Container -->
+            <div class="grid md:grid-cols-3 gap-6">
+               <!-- Triangle Container -->
+               <div
+                  class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-12 space-y-8"
+               >
+                  <div>
+                     <img src="images/triangle.png" alt="" />
+                  </div>
+                  <div class="space-y-4">
+                     <h3 class="text-2xl font-bold">Triangle</h3>
+                     <p>Area (A) = 0.5 X b X h</p>
+                     <div class="grid grid-cols-4 gap-2 items-center">
+                        <!-- base -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="b"
+                           id="triangle-base"
+                        />
+                        <span>cm</span>
+
+                        <!-- height -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="h"
+                           id="triangle-height"
+                        />
+                        <span>cm</span>
+                     </div>
+                     <p>
+                        Area: <span id="triangle-area-display">xyz</span> cm<sup
+                           >2</sup
+                        >
+                     </p>
+                  </div>
+
+                  <div class="">
+                     <button
+                        class="rounded-lg bg-[#1090D8] font-bold text-xl text-[#fff] p-4 w-full"
+                        onclick="calculateTriangleArea()"
+                     >
+                        Calculate
+                     </button>
+                  </div>
+               </div>
+               <!-- Triangle End -->
+
+               <!-- Rectangle Container -->
+               <div
+                  class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-12 space-y-8"
+               >
+                  <div>
+                     <img src="images/rectangle.png" alt="" />
+                  </div>
+                  <div class="space-y-4">
+                     <h3 class="text-2xl font-bold">Rectangle</h3>
+                     <p>Area (A) = w X l</p>
+                     <div class="grid grid-cols-4 gap-2 items-center">
+                        <!-- base -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="w"
+                           id="rectangle-width"
+                        />
+                        <span>cm</span>
+
+                        <!-- height -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="l"
+                           id="rectangle-length"
+                        />
+                        <span>cm</span>
+                     </div>
+                     <p>
+                        Area:
+                        <span id="rectangle-area-display">xyz</span> cm<sup
+                           >2</sup
+                        >
+                     </p>
+                  </div>
+
+                  <div class="">
+                     <button
+                        class="rounded-lg bg-[#1090D8] font-bold text-xl text-[#fff] p-4 w-full"
+                        onclick="calculateRectangleArea()"
+                     >
+                        Calculate
+                     </button>
+                  </div>
+               </div>
+               <!-- Rectangle End -->
+
+               <!-- Parallelogram Container -->
+               <div
+                  class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-12 space-y-8"
+               >
+                  <div>
+                     <img src="images/parallelogram.png" alt="" />
+                  </div>
+                  <div class="space-y-4">
+                     <h3 class="text-2xl font-bold">Parallelogram</h3>
+                     <p>Area (A) = w X l</p>
+                     <div class="grid grid-cols-4 gap-2 items-center">
+                        <!-- base -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="w"
+                           id="parallelogram"
+                        />
+                        <span>cm</span>
+
+                        <!-- height -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="l"
+                           id="parallelogram-length"
+                        />
+                        <span>cm</span>
+                     </div>
+                     <p>
+                        Area:
+                        <span id="parallelogram-area-display">xyz</span> cm<sup
+                           >2</sup
+                        >
+                     </p>
+                  </div>
+
+                  <div class="">
+                     <button
+                        class="rounded-lg bg-[#1090D8] font-bold text-xl text-[#fff] p-4 w-full"
+                        onclick="calculateParallelogramArea()"
+                     >
+                        Calculate
+                     </button>
+                  </div>
+               </div>
+               <!-- Parallelogram End -->
+            </div>
+            <!-- Area Calculation Container -->
+            <div class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-7">
+               <h3 class="underline">Area Calculation</h3>
+            </div>
+         </section>
+      </main>
+
+      <!-- Scripts -->
+      <script src="/scripts/calculate-triangle-area.js"></script>
+      <script src="/scripts/calculate-rectangle-area.js"></script>
+      <script src="scripts/calculate-parallelogram-area.js"></script>
+   </body>
 </html>
