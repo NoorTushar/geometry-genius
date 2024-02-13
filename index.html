@@ -35,7 +35,7 @@
       <main class="max-w-[1820px] mx-auto w-[95%]">
          <section>
             <!-- All Dimensions Container -->
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                <!-- Triangle Container -->
                <div
                   class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-12 space-y-8"
@@ -274,6 +274,54 @@
                   </div>
                </div>
                <!-- Pentagon End -->
+
+               <!-- Ellipse Container -->
+               <div
+                  class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-12 space-y-8"
+               >
+                  <div>
+                     <img src="images/ellipse.png" alt="" />
+                  </div>
+                  <div class="space-y-4">
+                     <h3 class="text-2xl font-bold">Ellipse</h3>
+                     <p>Area (A) = pie X a X b</p>
+                     <div class="grid grid-cols-4 gap-2 items-center">
+                        <!-- base -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="a"
+                           id="ellipse-aAxis"
+                        />
+                        <span>cm</span>
+
+                        <!-- height -->
+                        <input
+                           class="rounded p-2 bg-[#F1F1F1]"
+                           type="text"
+                           placeholder="b"
+                           id="ellipse-bAxis"
+                        />
+                        <span>cm</span>
+                     </div>
+                     <p>
+                        Area:
+                        <span id="ellipse-area-display">xyz</span> cm<sup
+                           >2</sup
+                        >
+                     </p>
+                  </div>
+
+                  <div class="">
+                     <button
+                        class="rounded-lg bg-[#1090D8] font-bold text-xl text-[#fff] p-4 w-full"
+                        onclick="calculateEllipseArea()"
+                     >
+                        Calculate
+                     </button>
+                  </div>
+               </div>
+               <!-- Ellipse End -->
             </div>
             <!-- Area Calculation Container -->
             <div class="border border-[rgba(17, 17, 17, 0.10)] rounded-lg p-7">
@@ -288,5 +336,6 @@
       <script src="scripts/calculate-parallelogram-area.js"></script>
       <script src="scripts/calculate-rhombus-area.js"></script>
       <script src="scripts/calculate-pentagon-area.js"></script>
+      <script src="scripts/calculate-ellipse-area.js"></script>
    </body>
 </html>
